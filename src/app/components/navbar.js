@@ -38,7 +38,7 @@ export default function Navbar() {
 
       {/* Navigation Links */}
       <div className={`md:block ${isMenuOpen ? "block" : "hidden"}`}>
-        <ul className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0 md:space-x-6 text-white font-semibold futuristic-text mt-4 md:mt-0">
+        <ul className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0 md:space-x-6 text-white futuristic-text mt-4 md:mt-0">
           {["home", "about", "projects", "contact"].map((section) => (
             <li key={section}>
               <a

@@ -32,9 +32,9 @@ export default function Home() {
     <p className="text-4xl sm:text-5xl md:text-6xl font-bold bg-gradient-to-r from-purple-500 to-blue-500 bg-clip-text text-transparent">
       Hi, I'm
     </p>
-    <h1 className="text-5xl sm:text-6xl md:text-8xl font-bold mt-4 sm:mt-6 tracking-widest text-white futuristic-text-glitch">
+    <p className="text-5xl sm:text-6xl md:text-8xl  mt-4 sm:mt-6 tracking-widest text-white futuristic-text-glitch">
       Hansana Kavinda
-    </h1>
+    </p>
     <p className="text-3xl sm:text-4xl md:text-5xl font-bold mt-4 sm:mt-6 tracking-widest bg-gradient-to-r from-purple-500 to-blue-500 bg-clip-text text-transparent h-16">
       <Typewriter
         words={["A Software Engineer", "A Web Developer"]}

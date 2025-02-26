@@ -35,11 +35,13 @@ body {
 
 .futuristic-text {
   font-family: 'Orbitron', sans-serif;
+  font-weight: bold;
 }
 
 .futuristic-text-glitch {
   font-family: 'Rajdhani', sans-serif;
   color: #ffffff;
+  font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 7px;
   animation: glitch 5s infinite alternate;
