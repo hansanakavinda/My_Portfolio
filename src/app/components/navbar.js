@@ -25,7 +25,7 @@ export default function Navbar() {
   }, []);
 
   return (
-    <nav className="fixed top-4 left-1/2 transform -translate-x-1/2 w-[90%] max-w-[800px] bg-white/10 backdrop-blur-lg border border-white/10 shadow-md rounded-3xl py-4 px-10 z-50">
+    <nav className="fixed futuristic-text top-4 left-1/2 transform -translate-x-1/2 w-[90%] max-w-[800px] bg-white/10 backdrop-blur-lg border border-white/10 shadow-md rounded-3xl py-4 px-10 z-50">
       {/* Hamburger Button (visible on small screens) */}
       <div className="md:hidden flex justify-end">
         <button
@@ -38,7 +38,7 @@ export default function Navbar() {
 
       {/* Navigation Links */}
       <div className={`md:block ${isMenuOpen ? "block" : "hidden"}`}>
-        <ul className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0 md:space-x-6 text-white futuristic-text mt-4 md:mt-0">
+        <ul className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0 md:space-x-6 text-white  mt-4 md:mt-0">
           {["home", "about", "projects", "contact"].map((section) => (
             <li key={section}>
               <a
