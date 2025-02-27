@@ -26,44 +26,34 @@ export default function Home() {
     <div>
       {/* Home Section */}
       <section id="home" className="h-screen flex items-center justify-center bg-white/0  leading-relaxed relative ">
-      <div className="flex flex-col md:flex-row items-center md:items-center justify-center min-h-screen px-6">
-  {/* Left Content */}
-  <div className="text-center md:text-left md:w-3/5 lg:w-2/3 xl:w-3/4">
-    <p className="text-4xl sm:text-5xl md:text-6xl font-bold bg-gradient-to-r from-purple-500 to-blue-500 bg-clip-text text-transparent">
-      Hi, I'm
-    </p>
-    <p className="text-5xl sm:text-6xl md:text-8xl  mt-4 sm:mt-6 tracking-widest text-white futuristic-text-glitch">
-      Hansana Kavinda
-    </p>
-    <p className="text-3xl sm:text-4xl md:text-5xl font-bold mt-4 sm:mt-6 tracking-widest bg-gradient-to-r from-purple-500 to-blue-500 bg-clip-text text-transparent h-16">
-      <Typewriter
-        words={["A Software Engineer", "A Web Developer"]}
-        loop={0}
-        cursor
-        cursorStyle=""
-        typeSpeed={150}
-        deleteSpeed={50}
-        delaySpeed={2000}
-      />
-    </p>
-  </div>
-
-  {/* Right Profile Picture */}
-  <div className="flex items-center justify-center md:ml-auto md:w-1/3 lg:w-1/4 mt-10 md:mt-0">
-    <div className="relative w-48 h-48 sm:w-64 sm:h-64 md:w-80 md:h-80 rounded-full  flex items-center justify-center">
-      <div className="w-full h-full bg-transparent rounded-full flex items-center justify-center">
-        <Image
-          src="/pf.png"
-          alt="Profile Picture"
-          width={400}
-          height={400}
-          className="rounded-full w-full h-auto"
-        />
+      <div className="flex flex-col items-left ">
+        <p className="text-6xl font-bold text-left bg-gradient-to-r from-purple-500 to-blue-500 bg-clip-text text-transparent ">Hi, I'm</p>
+        <h1 className="text-8xl font-bold mt-6 tracking-widest text-white-300 neon-text futuristic-text-glitch mr-4">Hansana Kavinda</h1>
+        <p className="text-5xl font-bold mt-6 tracking-widest bg-gradient-to-r from-purple-500 to-blue-500 bg-clip-text text-transparent ml-2 h-20">
+        <Typewriter
+          words={[ "A Software Engineer", "A Web Developer"]}
+          loop={0} // Infinite loop
+          cursor
+          cursorStyle=""
+          typeSpeed={150}
+          deleteSpeed={50}
+          delaySpeed={2000}
+          />
+        </p>
       </div>
-    </div>
-  </div>
-</div>
-
+      <div className="flex flex-col items-center justify-center min-h-screen bg-white/0">
+      <div className="relative w-350 h-350 rounded-full bg-radial ">
+          <div className="w-full h-full bg-black/20 rounded-full flex items-center justify-center  ">
+            <Image
+              src="/pf.png"
+              alt="Profile Picture"
+              width={450}
+              height={450}
+              className="rounded-full"
+            />
+          </div>
+        </div>
+      </div>
 
     {/*ask me anything button */}
     <div className="absolute bottom-10 left-1/2 -translate-x-1/2">
