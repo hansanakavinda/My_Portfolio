@@ -25,58 +25,63 @@ export default function Home() {
   return (
     <div>
       {/* Home Section */}
-      <section id="home" className="h-screen flex items-center justify-center bg-white/0  leading-relaxed relative px-8">
-      <div className="flex flex-col items-left "> 
-        <p className="text-6xl font-bold text-left bg-gradient-to-r from-purple-500 to-blue-500 bg-clip-text text-transparent ">Hi, I'm</p>
-        <h1 className="text-8xl font-raj font-bold mt-6 tracking-widest text-white-300 neon-text futuristic-text-glitch mr-4">Hansana Kavinda</h1>
-        <p className="text-5xl font-bold mt-6 tracking-widest bg-gradient-to-r from-purple-500 to-blue-500 bg-clip-text text-transparent h-20">
-        <Typewriter
-          words={[ "A Software Engineer", "A Web Developer"]}
-          loop={0} // Infinite loop
-          cursor
-          cursorStyle=""
-          typeSpeed={150}
-          deleteSpeed={50}
-          delaySpeed={2000}
-          />
-        </p>
+      <section id="home" className="h-screen flex flex-col md:flex-row items-center justify-center bg-white/0 leading-relaxed relative px-8 text-center md:text-left">
+  <div className="flex flex-col items-center md:items-start pr-8">
+    <p className="text-3xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-purple-500 to-blue-500 bg-clip-text text-transparent">
+      Hi, I'm
+    </p>
+    <h1 className="text-4xl md:text-6xl lg:text-8xl font-raj font-bold mt-6 tracking-widest text-white-300 neon-text futuristic-text-glitch">
+      Hansana Kavinda
+    </h1>
+    <p className="text-2xl md:text-4xl lg:text-5xl font-bold mt-6 tracking-widest bg-gradient-to-r from-purple-500 to-blue-500 bg-clip-text text-transparent h-20">
+      <Typewriter
+        words={["A Software Engineer", "A Web Developer"]}
+        loop={0}
+        cursor
+        cursorStyle=""
+        typeSpeed={150}
+        deleteSpeed={50}
+        delaySpeed={2000}
+      />
+    </p>
+  </div>
+  
+  <div className="flex flex-col items-center justify-center mt-10 md:mt-0">
+    <div className="relative w-40 h-40 md:w-60 md:h-60 lg:w-[350px] lg:h-[350px] rounded-full bg-radial">
+      <div className="w-full h-full bg-black/20 rounded-full flex items-center justify-center">
+        <Image
+          src="/pf.png"
+          alt="Profile Picture"
+          width={250}
+          height={250}
+          className="rounded-full md:w-[350px] md:h-[350px]"
+        />
       </div>
-      <div className="flex flex-col items-center justify-center min-h-screen bg-white/0">
-      <div className="relative w-350 h-350 rounded-full bg-radial ">
-          <div className="w-full h-full bg-black/20 rounded-full flex items-center justify-center  ">
-            <Image
-              src="/pf.png"
-              alt="Profile Picture"
-              width={450}
-              height={450}
-              className="rounded-full"
-            />
-          </div>
-        </div>
-      </div>
-
-    {/*ask me anything button */}
-    <div className="absolute bottom-10 left-1/2 -translate-x-1/2">
-    <button className="px-6 py-4 text-lg font-bold text-white bg-white/10 hover:bg-purple-700 rounded-full shadow-lg hover:scale-105 transition"
-    onClick={scrollToChatBot} // Scrolls to chatbot
-    >
+    </div>
+  </div>
+  
+  {/* Ask Me Anything button */}
+  <div className="absolute bottom-10 left-1/2 -translate-x-1/2 w-auto">
+    <button className="px-4 md:px-6 py-3 md:py-4 text-sm md:text-lg font-bold text-white bg-white/10 hover:bg-purple-700 rounded-full shadow-lg hover:scale-105 transition"
+      onClick={scrollToChatBot}>
       Ask Me Anything
     </button>
   </div>
-      </section>
+</section>
+
 
       {/* About Section */}
-      <section id="about" className="h-screen flex items-center justify-center bg-black/20 relative">
+      <section id="about" className="min-h-screen flex items-center justify-center bg-black/20 relative">
       <div className="max-w-4xl mx-auto py-10 px-5">
       {/* Section Title */}
-      <h1 className="text-5xl font-bold mb-6 text-center bg-gradient-to-r from-purple-500 to-blue-500 bg-clip-text text-transparent">
+      <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-center bg-gradient-to-r from-purple-500 to-blue-500 bg-clip-text text-transparent">
         About Me
       </h1>
 
       {/* Grid Layout */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 items-center bg-white/10 rounded-lg shadow-md">
         {/* Left Section - Profile Details */}
-        <div className="text-lg text-white bg-transparent p-10 rounded-lg text-justify leading-relaxed">
+        <div className="text-sm md:text-md lg:text-lg text-white bg-transparent p-10 rounded-lg text-justify leading-relaxed">
           <p>
             Hi, I'm <span className="font-bold">Hansana Kavinda</span>, a passionate{" "}
             <strong>Data Science undergraduate</strong> pursuing an{" "}
@@ -94,10 +99,10 @@ export default function Home() {
         {/* Right Section - Skills & Education with Toggle */}
         <div className="bg-transparent p-5 rounded-lg  w-full max-w-3xl mx-auto">
       {/* Toggle Buttons */}
-      <div className="flex justify-center space-x-4 mb-4">
+      <div className="flex justify-center space-x-4 mb-4 text-sm md:text-md lg:text-lg">
         <button
           className={`px-4 py-2 rounded-md transition ${
-            activeTab === "skills" ? "bg-purple-700 text-white font-bold text-lg"  : "bg-gray-200 hover:bg-purple-500 text-gray-700 font-bold text-lg"
+            activeTab === "skills" ? "bg-purple-700 text-white font-bold "  : "bg-gray-200 hover:bg-purple-500 text-gray-700 font-bold "
           }`}
           onClick={() => setActiveTab("skills")}
         >
@@ -105,7 +110,7 @@ export default function Home() {
         </button>
         <button
           className={`px-4 py-2 rounded-md transition ${
-            activeTab === "education" ? "bg-purple-700  text-white font-bold text-lg" : "bg-gray-200 hover:bg-purple-500 text-gray-700 font-bold text-lg"
+            activeTab === "education" ? "bg-purple-700  text-white font-bold " : "bg-gray-200 hover:bg-purple-500 text-gray-700 font-bold "
           }`}
           onClick={() => setActiveTab("education")}
         >
@@ -114,11 +119,11 @@ export default function Home() {
       </div>
 
       {/* Content Section with Fixed Height */}
-      <div className="text-white text-center min-h-[200px] flex items-center justify-center">
+      <div className="text-sm md:text-md lg:text-lg text-white text-center min-h-[200px] flex items-left justify-center ">
         {/* Skills Section */}
         {activeTab === "skills" && (
           <div>
-            <ul className="mt-2 text-lg list-disc list-inside text-left pl-20 leading-relaxed">
+            <ul className="mt-2 list-disc list-inside text-left pl-5 sm:pl-20 leading-relaxed">
               <li>Python</li>
               <li>SQL</li>
               <li>C#</li>
@@ -134,12 +139,12 @@ export default function Home() {
           <div className="text-left">
             <div className="relative pl-6 border-l-2 border-gray-300 leading-relaxed">
               <div className="mb-4">
-                <div className="absolute w-3 h-3 bg-blue-500 rounded-full -left-[6px]"></div>
+                <div className="absolute w-3 h-3 bg-blue-500 rounded-full -left-[7px] sm:-left-[6px]"></div>
                 <p className="font-bold text-lg">HND in Software Engineering</p>
                 <p className="text-gray-300">ESOFT Metro Campus (2023 - 2025)</p>
               </div>
               <div>
-                <div className="absolute w-3 h-3 bg-blue-500 rounded-full -left-[6px]"></div>
+                <div className="absolute w-3 h-3 bg-blue-500 rounded-full -left-[7px] sm:-left-[6px]"></div>
                 <p className="font-bold text-lg">Bsc (HONS) Data Science</p>
                 <p className="text-gray-300">ESOFT Metro Campus (2025 - Present)</p>
               </div>
@@ -155,15 +160,15 @@ export default function Home() {
       {/* Projects Section */}
       <section id="projects" className="min-h-screen flex flex-col items-center justify-center bg-transparent text-white py-20 px-5">
   {/* Section Title */}
-  <h1 className="text-5xl font-bold text-center mb-6 bg-gradient-to-r from-purple-500 to-blue-500 bg-clip-text text-transparent">
+  <h1 className="text-4xl md:text-4xl lg:text-5xl font-bold text-center mb-6 bg-gradient-to-r from-purple-500 to-blue-500 bg-clip-text text-transparent">
     My Projects
   </h1>
-  <p className="text-lg text-gray-300 text-center w-3/4 md:w-1/2 mb-12">
+  <p className="text-base md:text-md lg:text-lg text-gray-300 text-center w-3/4 md:w-1/2 mb-12">
     Here are some of my projects showcasing my skills in web development and AI.
   </p>
 
   {/* Project Grid */}
-  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full max-w-6xl">
+  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full max-w-6xl text-base md:text-md lg:text-lg">
     {/* Sample Project 1 */}
     <a
       href="https://github.com/yourusername/project1"
@@ -179,7 +184,7 @@ export default function Home() {
       <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition">
         <span className="text-white font-bold text-xl">View Project</span>
       </div>
-      <h3 className="mt-4 text-center text-xl font-semibold">Object detection application</h3>
+      <h3 className="mt-4 text-center  font-semibold">Object detection application</h3>
     </a>
 
     {/* Sample Project 2 */}
@@ -197,7 +202,7 @@ export default function Home() {
       <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition">
         <span className="text-white font-bold text-xl">View Project</span>
       </div>
-      <h3 className="mt-4 text-center text-xl font-semibold">Photography Website</h3>
+      <h3 className="mt-4 text-center  font-semibold">Photography Website</h3>
     </a>
 
     {/* Sample Project 3 */}
@@ -215,7 +220,7 @@ export default function Home() {
       <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition">
         <span className="text-white font-bold text-xl">View Project</span>
       </div>
-      <h3 className="mt-4 text-center text-xl font-semibold">Data analysis System</h3>
+      <h3 className="mt-4 text-center  font-semibold">Data analysis System</h3>
     </a>
   </div>
 </section>
@@ -224,16 +229,16 @@ export default function Home() {
       {/* Contact Section */}
       <section id="contact" className="min-h-screen flex flex-col items-center justify-center bg-black/20 text-white py-20 px-5">
   {/* Section Title */}
-  <h1 className="text-5xl font-bold text-center mb-6 bg-gradient-to-r from-purple-500 to-blue-500 bg-clip-text text-transparent">
+  <h1 className="text-4xl md:text-4xl lg:text-5xl font-bold text-center mb-6 bg-gradient-to-r from-purple-500 to-blue-500 bg-clip-text text-transparent">
     Contact Me
   </h1>
-  <p className="text-lg text-gray-300 text-center w-3/4 md:w-1/2 mb-12">
+  <p className="text-base md:text-md lg:text-lg text-gray-300 text-center w-3/4 md:w-1/2 mb-12">
     Feel free to reach out for collaborations or inquiries!
   </p>
 
   {/* Contact Form */}
-  <div className="w-full max-w-lg bg-white/5  p-8 rounded-lg shadow-lg">
-    <form action="#" method="POST">
+  <div className="w-full max-w-lg bg-white/5  p-8 rounded-lg shadow-lg text-sm md:text-md lg:text-lg">
+    <form action="#" method="POST" >
       <div className="mb-4">
         <label className="block text-gray-400 text-sm mb-2">Name</label>
         <input type="text" className="w-full px-4 py-2 bg-gray-800 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500" placeholder="Enter your name" required />
@@ -256,7 +261,7 @@ export default function Home() {
   </div>
 
 </section>
-<div ref={chatBotRef} className="relative">
+<div ref={chatBotRef} className="relative text-sm md:text-md lg:text-lg">
     <Chatbot />
   </div>
 <footer className="bg-black/20 backdrop-blur-lg text-white py-6">
