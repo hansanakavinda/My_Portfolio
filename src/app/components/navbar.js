@@ -26,7 +26,7 @@ export default function Navbar() {
   }, []);
 
   return (
-    <nav className="fixed font-bold font-Orbitron top-4 left-1/2 transform -translate-x-1/2 w-[90%] max-w-[800px] bg-white/10 backdrop-blur-lg border border-white/10 shadow-md rounded-3xl py-4 px-10 z-50">
+    <nav className="fixed font-bold font-orb top-4 left-1/2 transform -translate-x-1/2 w-[90%] max-w-[800px] bg-white/10 backdrop-blur-lg border border-white/10 shadow-md rounded-3xl py-4 px-10 z-50">
       {/* Hamburger Button (visible on small screens) */}
       <div className="md:hidden flex justify-end">
         <button

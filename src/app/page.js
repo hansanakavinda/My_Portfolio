@@ -26,9 +26,9 @@ export default function Home() {
     <div>
       {/* Home Section */}
       <section id="home" className="h-screen flex items-center justify-center bg-white/0  leading-relaxed relative px-8">
-      <div className="flex flex-col items-left "> 
+      <div className="flex flex-col items-left font-raj"> 
         <p className="text-6xl font-bold text-left bg-gradient-to-r from-purple-500 to-blue-500 bg-clip-text text-transparent ">Hi, I'm</p>
-        <h1 className="text-7xl font-bold mt-6 tracking-widest text-white-300 neon-text futuristic-text-glitch font-mono mr-4">Hansana Kavinda</h1>
+        <h1 className="text-8xl font-bold mt-6 tracking-widest text-white-300 neon-text futuristic-text-glitch mr-4">Hansana Kavinda</h1>
         <p className="text-5xl font-bold mt-6 tracking-widest bg-gradient-to-r from-purple-500 to-blue-500 bg-clip-text text-transparent h-20">
         <Typewriter
           words={[ "A Software Engineer", "A Web Developer"]}
@@ -80,7 +80,7 @@ export default function Home() {
           <p>
             Hi, I'm <span className="font-bold">Hansana Kavinda</span>, a passionate{" "}
             <strong>Data Science undergraduate</strong> pursuing an{" "}
-            <strong>BSc Hons in Data Science</strong> at{" "}
+            <strong>BSc (Hons) in Data Science</strong> at{" "}
             <strong>ESOFT Metro Campus</strong>.
           </p>
           <p className="mt-4">

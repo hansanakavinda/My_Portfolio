@@ -11,6 +11,9 @@ module.exports = {
         sans: "var(--font-geist-sans)",
         mono: "var(--font-geist-mono)",
         pokemon: "var(--font-press-start)",
+        orb: "var(--font-orb)",
+        raj: "var(--font-raj)",
+
       },
       fontSize: {
         tiny: '0.6rem',  // Adding a tiny font size
