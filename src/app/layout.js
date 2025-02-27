@@ -29,7 +29,7 @@ const pressStart = Press_Start_2P({
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable} ${pressStart.variable} relative`}>
+      <body className={`${geistSans.variable} ${geistMono.variable} ${pressStart.variable} relative font-mono`}>
         
         <Navbar />
         <DynamicBackground/>
