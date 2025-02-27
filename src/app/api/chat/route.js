@@ -16,7 +16,6 @@ const checkCustomResponse = (question) => {
     return customResponses[normalizedQuestion] || null;
 };
 
-
 export async function POST(req) {
     try {
         const body = await req.json();
@@ -30,35 +29,40 @@ export async function POST(req) {
 
         console.log("Received prompt:", prompt);
 
+        // Check if it's a predefined response
         const customReply = checkCustomResponse(prompt);
         if (customReply) {
             return NextResponse.json({ reply: customReply });
         }
+        
+        console.log("API Key:", process.env.OPENROUTER_API_KEY);
 
-        const response = await fetch("http://localhost:11434/api/generate", {
+        // Send request to OpenRouter AI
+        const response = await fetch("https://openrouter.ai/api/v1/chat/completions", {
             method: "POST",
-            headers: { "Content-Type": "application/json" },
+            headers: { 
+                "Authorization": `Bearer ${process.env.OPENROUTER_API_KEY}`,
+                "Content-Type": "application/json",
+            },
             body: JSON.stringify({
-                model: "deepseek-r1:1.5b",
-                prompt: prompt,
-                stream: false,
+                model: "openai/gpt-3.5-turbo",
+                messages: [{ role: "user", content: prompt }],
             }),
         });
 
-        console.log("Ollama API status:", response.status);
+        console.log("OpenRouter API status:", response.status);
 
         if (!response.ok) {
             const errorText = await response.text();
-            console.error("Ollama API Error:", errorText);
-            return NextResponse.json({ error: `Ollama API error: ${errorText}` }, { status: 500 });
+            console.error("OpenRouter API Error:", errorText);
+            return NextResponse.json({ error: `OpenRouter API error: ${errorText}` }, { status: 500 });
         }
 
         const data = await response.json();
-        console.log("Ollama Response:", data);
+        console.log("OpenRouter Response:", data);
 
-        // ✅ Remove ALL <think> tags and their content
-        let botReply = data.response?.trim() || "I'm not sure how to respond to that.";
-        botReply = botReply.replace(/<think>.*?<\/think>/gis, "").trim(); // Handles multi-line cases
+        // Extract the reply from the response
+        let botReply = data.choices?.[0]?.message?.content?.trim() || "I'm not sure how to respond to that.";
 
         return NextResponse.json({ reply: botReply });
     } catch (error) {
