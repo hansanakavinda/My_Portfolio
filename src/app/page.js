@@ -28,8 +28,8 @@ export default function Home() {
       <section id="home" className="h-screen flex items-center justify-center bg-white/0  leading-relaxed relative ">
       <div className="flex flex-col items-left "> 
         <p className="text-6xl font-bold text-left bg-gradient-to-r from-purple-500 to-blue-500 bg-clip-text text-transparent ">Hi, I'm</p>
-        <h1 className="text-8xl font-bold mt-6 tracking-widest text-white-300 neon-text futuristic-text-glitch mr-4">Hansana Kavinda</h1>
-        <p className="text-5xl font-bold mt-6 tracking-widest bg-gradient-to-r from-purple-500 to-blue-500 bg-clip-text text-transparent ml-2 h-20">
+        <h1 className="text-8xl font-bold mt-6 tracking-widest text-white-300 neon-text futuristic-text-glitch font-pokemon text-4xl mr-4">Hansana Kavinda</h1>
+        <p className="text-5xl font-bold mt-6 tracking-widest bg-gradient-to-r from-purple-500 to-blue-500 bg-clip-text text-transparent h-20">
         <Typewriter
           words={[ "A Software Engineer", "A Web Developer"]}
           loop={0} // Infinite loop
