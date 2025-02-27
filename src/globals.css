@@ -1,5 +1,5 @@
 /* Move the @import statement to the very top */
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Rajdhani:wght@400;700&family=Audiowide&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Rajdhani:wght@400;700&family=Audiowide&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -34,7 +34,7 @@ body {
 }
 
 .futuristic-text {
-  font-family: 'Orbitron', sans-serif;
+  font-family: 'Rajdhani', sans-serif;
   font-weight: bold;
 }
 
