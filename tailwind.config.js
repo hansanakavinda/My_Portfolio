@@ -13,12 +13,18 @@ module.exports = {
         pokemon: "var(--font-press-start)",
         orb: "var(--font-orb)",
         raj: "var(--font-raj)",
-
       },
       fontSize: {
-        tiny: '0.6rem',  // Adding a tiny font size
+        tiny: "0.6rem", // Custom small font size
       },
+      spacing: {
+        'ws-tiny': '0.05em',  // Smallest custom word spacing
+        'ws-sm': '0.1em',
+        'ws-md': '0.2em',
+        'ws-lg': '0.3em',
+      }
     },
   },
+
   plugins: [],
 };
