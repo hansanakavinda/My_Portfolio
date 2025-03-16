@@ -9,7 +9,7 @@ export default function Footer() {
         
         {/* Left - Contact Details */}
         <div className="text-center md:text-left mb-4 md:mb-0">
-          <h3 className="text-xl font-bold">Kavinda</h3>
+          <h3 className="text-xl font-bold">Hansana Kavinda</h3>
           <p className="text-gray-400 text-sm mt-1">
             Data Science Undergraduate | Software Engineer
           </p>
