@@ -1,3 +1,58 @@
+function ProjectCard({ githublink, demolink, image, projectName }) {
+  const href = githublink || demolink || '#';
+  return (
+    <a
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="group relative overflow-hidden rounded-lg shadow-lg transform transition hover:scale-105 bg-black/20 shadow-lg"
+    >
+      <img
+        src={image}
+        alt={projectName}
+        className="w-full h-64 object-cover transition-opacity duration-300 group-hover:opacity-75"
+      />
+      <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition">
+        <span className="text-white font-bold text-xl">View Project</span>
+      </div>
+      <h3 className="mt-4 text-center  font-semibold">{projectName}</h3>
+    </a>
+  );
+}
+
+const projects = [
+  {
+    githublink: "https://github.com/hansanakavinda/IntelligentItineraryPlanner",
+    demolink: null,
+    image: "/travelio.png",
+    projectName: "Intelligent Itinerary Planner",
+  },
+  {
+    githublink: "https://github.com/hansanakavinda/ObjectDetection",
+    demolink: null,
+    image: "/project1.png",
+    projectName: "Object detection application",
+  },
+  {
+    githublink: "https://github.com/hansanakavinda/MediCare",
+    demolink: null,
+    image: "/medicare.png",
+    projectName: "MediCare",
+  },
+  {
+    githublink: "https://github.com/hansanakavinda/Photography_website",
+    demolink: null,
+    image: "/Malcolm.png",
+    projectName: "Photography Website",
+  },
+  {
+    githublink: "https://github.com/hansanakavinda/Data_analysis_system",
+    demolink: null,
+    image: "BurgerHouse.png",
+    projectName: "Data analysis System",
+  },
+];
+
 export default function Projects() {
 return (
     <section id="projects" className="min-h-screen flex flex-col items-center justify-center bg-transparent text-white py-20 px-5">
@@ -11,94 +66,15 @@ return (
 
   {/* Project Grid */}
   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full max-w-6xl text-base md:text-md lg:text-lg">
-    {/*intelligent itineray planner*/}
-    <a
-      href="https://github.com/hansanakavinda/IntelligentItineraryPlanner"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="group relative overflow-hidden rounded-lg shadow-lg transform transition hover:scale-105 bg-black/20 shadow-lg"
-    >
-      <img
-        src="/travelio.png"
-        alt="Intelligent Itinerary Planner"
-        className="w-full h-64 object-cover transition-opacity duration-300 group-hover:opacity-75"
+    {projects.map((p, idx) => (
+      <ProjectCard
+        key={`${p.projectName}-${idx}`}
+        githublink={p.githublink}
+        demolink={p.demolink}
+        image={p.image}
+        projectName={p.projectName}
       />
-      <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition">
-        <span className="text-white font-bold text-xl">View Project</span>
-      </div>
-      <h3 className="mt-4 text-center  font-semibold">Intelligent Itinerary Planner</h3>
-    </a>
-    {/* object detection application */}
-    <a
-      href="https://github.com/hansanakavinda/ObjectDetection"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="group relative overflow-hidden rounded-lg shadow-lg transform transition hover:scale-105 bg-black/20 shadow-lg"
-    >
-      <img
-        src="/project1.png"
-        alt="Project 1"
-        className="w-full h-64 object-cover transition-opacity duration-300 group-hover:opacity-75"
-      />
-      <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition">
-        <span className="text-white font-bold text-xl">View Project</span>
-      </div>
-      <h3 className="mt-4 text-center  font-semibold">Object detection application</h3>
-    </a>
-
-    {/* object detection application */}
-    <a
-      href="https://github.com/hansanakavinda/MediCare"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="group relative overflow-hidden rounded-lg shadow-lg transform transition hover:scale-105 bg-black/20 shadow-lg"
-    >
-      <img
-        src="/medicare.png"
-        alt="MediCare"
-        className="w-full h-64 object-cover transition-opacity duration-300 group-hover:opacity-75"
-      />
-      <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition">
-        <span className="text-white font-bold text-xl">View Project</span>
-      </div>
-      <h3 className="mt-4 text-center  font-semibold">MediCare</h3>
-    </a>
-
-    {/* Photography Website */}
-    <a
-      href="https://github.com/hansanakavinda/Photography_website"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="group relative overflow-hidden rounded-lg shadow-lg transform transition hover:scale-105 bg-black/20 shadow-lg"
-    >
-      <img
-        src="/Malcolm.png"
-        alt="Project 2"
-        className="w-full h-64 object-cover transition-opacity duration-300 group-hover:opacity-75"
-      />
-      <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition">
-        <span className="text-white font-bold text-xl">View Project</span>
-      </div>
-      <h3 className="mt-4 text-center  font-semibold">Photography Website</h3>
-    </a>
-
-    {/* Data Analysis System */}
-    <a
-      href="https://github.com/hansanakavinda/Data_analysis_system"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="group relative overflow-hidden rounded-lg shadow-lg transform transition hover:scale-105 bg-black/20 shadow-lg"
-    >
-      <img
-        src="BurgerHouse.png"
-        alt="Project 3"
-        className="w-full h-64 object-cover transition-opacity duration-300 group-hover:opacity-75"
-      />
-      <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition">
-        <span className="text-white font-bold text-xl">View Project</span>
-      </div>
-      <h3 className="mt-4 text-center  font-semibold">Data analysis System</h3>
-    </a>
+    ))}
   </div>
 </section>
 );
