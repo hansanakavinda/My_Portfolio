@@ -11,9 +11,26 @@ return (
 
   {/* Project Grid */}
   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full max-w-6xl text-base md:text-md lg:text-lg">
+    
+    <a
+      href="https://github.com/hansanakavinda/IntelligentItineraryPlanner"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="group relative overflow-hidden rounded-lg shadow-lg transform transition hover:scale-105 bg-black/20 shadow-lg"
+    >
+      <img
+        src="/travelio.png"
+        alt="Intelligent Itinerary Planner"
+        className="w-full h-64 object-cover transition-opacity duration-300 group-hover:opacity-75"
+      />
+      <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition">
+        <span className="text-white font-bold text-xl">View Project</span>
+      </div>
+      <h3 className="mt-4 text-center  font-semibold">Intelligent Itinerary Planner</h3>
+    </a>
     {/* Sample Project 1 */}
     <a
-      href="https://github.com/yourusername/project1"
+      href="https://github.com/hansanakavinda/ObjectDetection"
       target="_blank"
       rel="noopener noreferrer"
       className="group relative overflow-hidden rounded-lg shadow-lg transform transition hover:scale-105 bg-black/20 shadow-lg"
@@ -31,7 +48,7 @@ return (
 
     {/* Sample Project 2 */}
     <a
-      href="https://github.com/yourusername/project2"
+      href="https://github.com/hansanakavinda/Photography_website"
       target="_blank"
       rel="noopener noreferrer"
       className="group relative overflow-hidden rounded-lg shadow-lg transform transition hover:scale-105 bg-black/20 shadow-lg"
@@ -49,7 +66,7 @@ return (
 
     {/* Sample Project 3 */}
     <a
-      href="https://github.com/yourusername/project3"
+      href="https://github.com/hansanakavinda/Data_analysis_system"
       target="_blank"
       rel="noopener noreferrer"
       className="group relative overflow-hidden rounded-lg shadow-lg transform transition hover:scale-105 bg-black/20 shadow-lg"
