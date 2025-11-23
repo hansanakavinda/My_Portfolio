@@ -1,24 +1,5 @@
 import { NextResponse } from "next/server";
-
-const customResponses = {
-  hi: "Hello!",
-  "who are you": "I'm KaviBot. An AI assistant.",
-  "what is your name": "My name is KaviBot.",
-  "who is your creator":
-    "I was created by Kavinda, a Data Science undergraduate.",
-  "who created you": "I was created by Kavinda, a Data Science undergraduate.",
-  "what is kavinda studying":
-    "Kavinda is pursuing an HND in Software Engineering at ESOFT Metro Campus.",
-  "what are kavinda's skills":
-    "Kavinda has skills in Python, SQL, C#, PHP, teamwork, problem-solving, and critical thinking.",
-  "what is kavinda working on":
-    "Currently, Kavinda is working on a sentiment analysis project in the NLP domain using deep learning.",
-};
-
-const checkCustomResponse = (question) => {
-  const normalizedQuestion = question.toLowerCase().trim();
-  return customResponses[normalizedQuestion] || null;
-};
+import { PERSONA_DATA } from "@/lib/personaData";
 
 export async function POST(req) {
   try {
@@ -34,15 +15,15 @@ export async function POST(req) {
       );
     }
 
-    console.log("Received prompt:", prompt);
+    const systemPrompt = `
+You are an AI assistant for Hansana Kavinda's portfolio website. Your name is KaviBot.
+Answer questions based on the following information about Hansana.
+If the answer is not in the data, you can say you don't know or suggest contacting him directly.
+Be professional, friendly, and concise.
 
-    // Check if it's a predefined response
-    const customReply = checkCustomResponse(prompt);
-    if (customReply) {
-      return NextResponse.json({ reply: customReply });
-    }
-
-    console.log("API Key:", process.env.OPENROUTER_API_KEY);
+PERSONA DATA:
+${JSON.stringify(PERSONA_DATA, null, 2)}
+    `;
 
     // Send request to OpenRouter AI
     const response = await fetch(
@@ -55,7 +36,10 @@ export async function POST(req) {
         },
         body: JSON.stringify({
           model: "openai/gpt-3.5-turbo",
-          messages: [{ role: "user", content: prompt }],
+          messages: [
+            { role: "system", content: systemPrompt },
+            { role: "user", content: prompt },
+          ],
         }),
       }
     );
