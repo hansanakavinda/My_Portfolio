@@ -21,6 +21,7 @@
     "react-dom": "^19.0.0",
     "react-simple-typewriter": "^5.0.1",
     "react-tsparticles": "^2.11.0",
+    "resend": "^6.5.2",
     "tsparticles": "^2.11.0"
   },
   "devDependencies": {

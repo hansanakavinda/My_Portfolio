@@ -1,4 +1,6 @@
-import { supabase } from "../../../lib/supabase";
+import { Resend } from 'resend';
+
+const resend = new Resend(process.env.RESEND_API_KEY);
 
 export async function POST(req) {
     try {
@@ -11,10 +13,19 @@ export async function POST(req) {
             });
         }
 
-        const { data, error } = await supabase.from("Inquiries").insert([{ name, email, message }]);
+        const { data, error } = await resend.emails.send({
+            from: 'onboarding@resend.dev',
+            to: 'hansanakavinda7@gmail.com',
+            subject: `New Inquiry from ${name}`,
+            reply_to: email,
+            text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`,
+        });
 
         if (error) {
-            throw error;
+            return new Response(JSON.stringify({ error: error.message }), {
+                status: 500,
+                headers: { "Content-Type": "application/json" },
+            });
         }
 
         return new Response(JSON.stringify({ message: "Message sent successfully!" }), {
