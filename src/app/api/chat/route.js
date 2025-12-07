@@ -35,7 +35,7 @@ ${JSON.stringify(PERSONA_DATA, null, 2)}
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          model: "openai/gpt-3.5-turbo",
+          model: "openai/gpt-oss-20b:free",
           messages: [
             { role: "system", content: systemPrompt },
             { role: "user", content: prompt },
