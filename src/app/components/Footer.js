@@ -27,11 +27,11 @@ export default function Footer() {
 
         {/* Center - Social Links */}
         <div className="flex space-x-6">
-          <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer"
+          <a href="https://github.com/hansanakavinda" target="_blank" rel="noopener noreferrer"
              className="text-gray-400 hover:text-purple-400 text-3xl transition transition-transform transform hover:scale-110 duration-200">
             <FontAwesomeIcon icon={faGithub} />
           </a>
-          <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer"
+          <a href="https://www.linkedin.com/in/hansanakavinda/" target="_blank" rel="noopener noreferrer"
              className="text-gray-400 hover:text-purple-400 text-3xl transition-transform transform hover:scale-110 duration-200">
             <FontAwesomeIcon icon={faLinkedin} />
           </a>
