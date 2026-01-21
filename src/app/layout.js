@@ -41,15 +41,19 @@ export const metadata = {
   },
 };
 
+import { Providers } from "./providers";
+
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body className={`${geistSans.variable} ${geistMono.variable} ${pressStart.variable} ${orbitron.variable} ${rajdhani.variable} relative font-mono`}>
-        <Navbar />
-        <DynamicBackground/>
-       
-        <main className="relative z-10">{children}</main>
-        <GoogleAnalytics gaId="G-RZZCEG62S7" />
+        <Providers>
+          <Navbar />
+          <DynamicBackground />
+
+          <main className="relative z-10">{children}</main>
+          <GoogleAnalytics gaId="G-RZZCEG62S7" />
+        </Providers>
       </body>
     </html>
   );
