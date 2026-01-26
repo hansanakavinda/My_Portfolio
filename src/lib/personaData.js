@@ -22,6 +22,12 @@ export const PERSONA_DATA = {
         languages: ["Sinhala", "English"],
         technical: {
             ai_ml: [
+                "Machine Learning",
+                "Deep Learning",
+                "Computer Vision",
+                "Natural Language Processing",
+                "LLMs",
+                "Transformers",
                 "TensorFlow",
                 "scikit-learn",
                 "PyTorch",
@@ -101,6 +107,24 @@ export const PERSONA_DATA = {
                 "Arranged a windows forms application to insert, delete, update, and retrieve data from the database. Created using .NET framework, C#, and SQL.",
             technologies: [".NET framework", "C#", "SQL", "WinForms"],
         },
+        {
+            name: "LLMs from Scratch",
+            description:
+                "Built core components of large language models (LLMs) from scratch using PyTorch and Jupyter Notebook[cite: 115]. Developed and trained a GPT-style transformer model at the character level, implementing tokenization, batching, self-attention, and deep learning training loops[cite: 116].",
+            technologies: ["PyTorch", "Jupyter Notebook", "Transformers", "Deep Learning"],
+        },
+        {
+            name: "Munin RAG System",
+            description:
+                "Engineered a Retrieval-Augmented Generation (RAG) system implementing a 3-stage pipeline (retrieve-rerank-generate) with ChromaDB and Sentence Transformers[cite: 120]. Developed advanced NLP components including CrossEncoder-based reranking for relevance optimization and intelligent document chunking[cite: 121].",
+            technologies: ["ChromaDB", "Sentence Transformers", "Python", "Streamlit", "LLM APIs"],
+        },
+        {
+            name: "AI-Powered Personal Assistant",
+            description:
+                "Built a responsive portfolio website and upgraded the UI with an AI-powered chatbot using the DeepSeek R1 1.5B model to enhance user interaction[cite: 126]. Tech stack includes Next.js, Tailwind CSS, and DeepSeek R1[cite: 127].",
+            technologies: ["Next.js", "Tailwind CSS", "DeepSeek R1", "AI Chatbot"],
+        }
     ],
     background:
         "Motivated Data Science undergraduate with hands-on experience developing intelligent systems, full-stack web applications, and AI/ML models. Proficient in Python, TensorFlow, scikit-learn, and OpenCV, with strong knowledge of data preprocessing, model training, and optimization. Experienced in deploying applications with Node.js and Next.js, and familiar with AWS and Docker. Passionate about exploring deep learning, generative AI, and scalable ML deployment.",
