@@ -37,7 +37,7 @@ export default function Home({ scrollToChatBot }) {
         </h1>
         <p className="text-2xl md:text-4xl lg:text-5xl font-bold mt-6 tracking-widest bg-gradient-to-r from-purple-500 to-blue-500 bg-clip-text text-transparent h-20 ">
           <Typewriter
-            words={["A Software Engineer", "A Web Developer"]}
+            words={["A Software Engineer", "A Web Developer", "An AI / ML Engineer"]}
             loop={0}
             cursor
             cursorStyle="|"
@@ -52,10 +52,10 @@ export default function Home({ scrollToChatBot }) {
           <a href="https://github.com/hansanakavinda" target="_blank" rel="noopener noreferrer" className="p-2 bg-white/10 rounded-full hover:bg-purple-600 hover:scale-110 transition duration-300">
             <Github className="w-6 h-6 text-white" />
           </a>
-          <a href="https://linkedin.com/in/" target="_blank" rel="noopener noreferrer" className="p-2 bg-white/10 rounded-full hover:bg-blue-600 hover:scale-110 transition duration-300">
+          <a href="https://linkedin.com/in/hansanakavinda" target="_blank" rel="noopener noreferrer" className="p-2 bg-white/10 rounded-full hover:bg-blue-600 hover:scale-110 transition duration-300">
             <Linkedin className="w-6 h-6 text-white" />
           </a>
-          <a href="mailto:contact@example.com" className="p-2 bg-white/10 rounded-full hover:bg-red-500 hover:scale-110 transition duration-300">
+          <a href="mailto:hansanakavinda7@gmail.com" className="p-2 bg-white/10 rounded-full hover:bg-red-500 hover:scale-110 transition duration-300">
             <Mail className="w-6 h-6 text-white" />
           </a>
           <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="p-2 bg-white/10 rounded-full hover:bg-blue-400 hover:scale-110 transition duration-300">
@@ -92,13 +92,13 @@ export default function Home({ scrollToChatBot }) {
         >
           Ask Me Anything
         </button>
-        <a
+        {/* <a
           href="/cv.pdf"
           download="Hansana_Kavinda_CV.pdf"
           className="px-6 py-3 font-bold text-white bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 rounded-full shadow-lg hover:scale-105 transition flex items-center justify-center"
         >
           Download CV
-        </a>
+        </a> */}
       </div>
     </motion.section>
   );

@@ -37,7 +37,7 @@ export default function Main() {
       </div>
 
       <div className="relative z-10">
-        <Testimonials />
+        {/* <Testimonials /> */}
         <Contacts />
       </div>
 

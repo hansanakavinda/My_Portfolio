@@ -45,7 +45,7 @@ export default function Chatbot() {
 
   return (
     <div className="relative text-sm md:text-md lg:text-lg">
-      <div className="relative w-full max-w-3xl mx-auto p-4 m-8 bg-white/5 text-white rounded-lg shadow-lg   ">
+      <div className="relative w-full max-w-5xl mx-auto p-4 m-8 bg-white/5 text-white rounded-lg shadow-lg   ">
         {/* Chatbot Messages */}
         <div
           ref={chatContainerRef}
@@ -58,16 +58,14 @@ export default function Chatbot() {
             >
               <p
                 className={` 
-                                ${
-                                  msg.role === "user" && msg.content.trim()
-                                    ? "bg-purple-700 text-white p-2 inline-block rounded-lg"
-                                    : ""
-                                }
-                                ${
-                                  msg.role === "bot" && msg.content.trim()
-                                    ? "bg-gray-700 text-white p-2 mr-8 inline-block rounded-lg"
-                                    : ""
-                                }
+                                ${msg.role === "user" && msg.content.trim()
+                    ? "bg-purple-700 text-white p-2 inline-block rounded-lg"
+                    : ""
+                  }
+                                ${msg.role === "bot" && msg.content.trim()
+                    ? "bg-gray-700 text-white p-2 mr-8 inline-block rounded-lg"
+                    : ""
+                  }
                             `}
               >
                 <strong>{msg.role === "user" ? "You: " : "Bot: "}</strong>{" "}

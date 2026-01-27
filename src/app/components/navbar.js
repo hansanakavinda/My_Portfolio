@@ -28,23 +28,51 @@ export default function Navbar() {
   useEffect(() => {
     const handleScroll = () => {
       const sections = ["home", "about", "projects", "contact"];
-      const scrollPosition = window.scrollY + 200;
+      const windowHeight = window.innerHeight;
+      const documentHeight = document.documentElement.scrollHeight;
+
+      // Check if at the bottom of the page - activate last section
+      if (window.scrollY + windowHeight >= documentHeight - 50) {
+        setActiveSection(sections[sections.length - 1]);
+        return;
+      }
+
+      // Check if at the top of the page - activate first section
+      if (window.scrollY < 100) {
+        setActiveSection("home");
+        return;
+      }
+
+      // Find the section that is currently most visible in the viewport
+      let currentSection = "home";
+      let minDistance = Infinity;
 
       for (const section of sections) {
         const element = document.getElementById(section);
-        if (element && element.offsetTop <= scrollPosition) {
-          setActiveSection(section);
+        if (element) {
+          const rect = element.getBoundingClientRect();
+          // Calculate distance from the top of viewport (accounting for navbar)
+          const distance = Math.abs(rect.top - 100);
+
+          // If section top is above or at viewport top and is closer than previous
+          if (rect.top <= windowHeight * 0.5 && distance < minDistance) {
+            minDistance = distance;
+            currentSection = section;
+          }
         }
       }
+
+      setActiveSection(currentSection);
     };
 
     window.addEventListener("scroll", handleScroll);
+    handleScroll(); // Call once on mount to set initial state
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
     <nav className={` ${hidden ? "-translate-y-16" : "translate-y-0"} 
-    fixed font-bold font-orb top-4 left-1/2 transform -translate-x-1/2 w-[90%] max-w-[800px] bg-white/10 backdrop-blur-lg border border-white/10 shadow-md rounded-3xl py-4 px-10 z-50 transition-transform duration-300 dark:bg-black/50 dark:border-white/5
+    fixed font-bold font-orb top-4 left-1/2 transform -translate-x-1/2 w-[90%] max-w-[800px] bg-white/10 backdrop-blur-lg border border-white/10 shadow-md rounded-3xl py-4 px-10 z-50 transition-transform duration-300
     `} >
       <div className="flex justify-between items-center md:block">
         {/* Hamburger Button (visible on small screens) */}

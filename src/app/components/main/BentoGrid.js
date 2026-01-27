@@ -112,7 +112,7 @@ export default function BentoGrid() {
 
 
                 {/* 6. Education (Span 4 cols - Full Width) */}
-                <BentoCard className="md:col-span-3 lg:col-span-4 row-span-1" delay={0.4}>
+                <BentoCard className="md:col-span-3 lg:col-span-2 row-span-1" delay={0.4}>
                     <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
                         <FaUniversity className="text-blue-400" /> Education
                     </h3>

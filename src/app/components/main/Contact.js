@@ -140,10 +140,10 @@ export default function Contact() {
             <h2 className="text-2xl font-bold text-white mb-6">Connect with me</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <SocialCard
-                href="mailto:contact@example.com"
+                href="mailto:hansanakavinda7@gmail.com"
                 icon={Mail}
                 label="Email"
-                subLabel="contact@example.com"
+                subLabel="hansanakavinda7@gmail.com"
                 color="text-red-400"
               />
               <SocialCard
@@ -176,7 +176,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <h3 className="font-bold text-white text-lg">Location</h3>
-                  <p className="text-gray-300">Colombo, Sri Lanka</p>
+                  <p className="text-gray-300">Matara, Sri Lanka</p>
                   <p className="text-gray-400 text-sm mt-1">Open to remote work worldwide</p>
                 </div>
               </div>
