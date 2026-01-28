@@ -135,11 +135,21 @@ function ProjectCard({ githublink, demolink, image, projectName, tags, video, on
 
 const projects = [
   {
+    githublink: null,
+    demolink: "https://meditation-platform-docq.vercel.app/",
+    image: "/projects/sati.png",
+    projectName: "Sati Meditation Platform",
+    tags: ["Node.js", "Next.js", "TypeScript", "PostgreSQL", "Prisma"],
+    video: null,
+    problem: "A local meditation service in Sri Lanka lacked an online platform to reach a wider audience and get exposure in the digital space.",
+    solution:"Developed a web application allowing users to view services and available times for meditation sesssions and contact the services providers directly through the platform."
+  },
+  {
     githublink: "https://github.com/hansanakavinda/IntelligentItineraryPlanner",
-    demolink: null,
-    image: "/travelio.png",
+    demolink: "https://travelio.streamlit.app/",
+    image: "/projects/travelio.png",
     projectName: "Intelligent Itinerary Planner",
-    tags: ["Python", "Flask", "React", "AI"],
+    tags: ["Python", "Scikit-learn", "Streamlit", "AI"],
     video: null,
     problem: "Travelers often spend hours planning trips, struggling to find optimal routes and attractions that fit their schedule and budget.",
     solution: "Developed an AI-powered planner that generates personalized itineraries based on user preferences. Used Flask for the backend API and React for the frontend, with a custom algorithm for route optimization."
@@ -147,7 +157,7 @@ const projects = [
   {
     githublink: "https://github.com/hansanakavinda/ObjectDetection",
     demolink: null,
-    image: "/project1.png",
+    image: "/projects/project1.png",
     projectName: "Object detection application",
     tags: ["Python", "OpenCV", "YOLO", "Deep Learning"],
     video: null,
@@ -157,9 +167,9 @@ const projects = [
   {
     githublink: "https://github.com/hansanakavinda/MediCare",
     demolink: null,
-    image: "/medicare.png",
+    image: "/projects/medicare.png",
     projectName: "MediCare",
-    tags: ["Next.js", "Tailwind", "Supabase"],
+    tags: [".Net Core", "Oracle SQL", "C#"],
     video: null,
     problem: "Patients struggle to manage medical records and appointments efficiently across different healthcare providers.",
     solution: "Built a comprehensive patient management system using Next.js and Supabase. Features include appointment scheduling, secure record storage, and a user-friendly dashboard for patients and doctors."
@@ -167,7 +177,7 @@ const projects = [
   {
     githublink: "https://github.com/hansanakavinda/Photography_website",
     demolink: null,
-    image: "/Malcolm.png",
+    image: "/projects/Malcolm.png",
     projectName: "Photography Website",
     tags: ["HTML", "CSS", "JavaScript"],
     video: null,
@@ -177,9 +187,9 @@ const projects = [
   {
     githublink: "https://github.com/hansanakavinda/Data_analysis_system",
     demolink: null,
-    image: "/BurgerHouse.png",
+    image: "/projects/BurgerHouse.png",
     projectName: "Data analysis System",
-    tags: ["Python", "Pandas", "Matplotlib", "DataFree"],
+    tags: ["Python", "Pandas", "Matplotlib"],
     video: null,
     problem: "Small businesses lack affordable tools to analyze sales data and generate actionable insights.",
     solution: "Developed a Python-based data analysis tool using Pandas and Matplotlib. It ingests CSV data and automatically generates visual reports on sales trends, inventory levels, and customer demographics."
