@@ -137,7 +137,7 @@ const projects = [
   {
     githublink: "https://github.com/hansanakavinda/univents",
     demolink: "https://univents.com.lk",
-    image: "/projects/sati.png",
+    image: "/projects/univents.png",
     projectName: "Univents",
     tags: ["Node.js", "Next.js", "TypeScript", "PostgreSQL", "Prisma"],
     video: null,
@@ -147,7 +147,7 @@ const projects = [
   {
     githublink: "https://github.com/hansanakavinda/secure-auth",
     demolink: "https://secure-auth-eight.vercel.app/",
-    image: "/projects/sati.png",
+    image: "/projects/secureauth.png",
     projectName: "Secure Auth",
     tags: ["NextAuth", "JWT", "OAuth", "Docker"],
     video: null,
