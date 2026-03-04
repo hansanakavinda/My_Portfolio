@@ -135,14 +135,34 @@ function ProjectCard({ githublink, demolink, image, projectName, tags, video, on
 
 const projects = [
   {
-    githublink: null,
+    githublink: "https://github.com/hansanakavinda/univents",
+    demolink: "https://univents.com.lk",
+    image: "/projects/sati.png",
+    projectName: "Univents",
+    tags: ["Node.js", "Next.js", "TypeScript", "PostgreSQL", "Prisma"],
+    video: null,
+    problem: "The univesities of Sri Lanka lacked a centralized platform for event management, making it difficult for students and organizers to share and discover events.",
+    solution: "Developed a web application allowing users to view events and post new events."
+  },
+  {
+    githublink: "https://github.com/hansanakavinda/secure-auth",
+    demolink: "https://secure-auth-eight.vercel.app/",
+    image: "/projects/sati.png",
+    projectName: "Secure Auth",
+    tags: ["NextAuth", "JWT", "OAuth", "Docker"],
+    video: null,
+    problem: "Many web applications lack a robust authentication system, making it difficult for developers to implement secure login and registration flows.",
+    solution: "Developed a Next.js application with NextAuth for authentication, JWT for session management, and OAuth for social logins. Used Docker for containerization."
+  },
+  {
+    githublink: "https://github.com/hansanakavinda/Meditation-platform",
     demolink: "https://meditation-platform-docq.vercel.app/",
     image: "/projects/sati.png",
     projectName: "Sati Meditation Platform",
     tags: ["Node.js", "Next.js", "TypeScript", "PostgreSQL", "Prisma"],
     video: null,
     problem: "A local meditation service in Sri Lanka lacked an online platform to reach a wider audience and get exposure in the digital space.",
-    solution:"Developed a web application allowing users to view services and available times for meditation sesssions and contact the services providers directly through the platform."
+    solution: "Developed a web application allowing users to view services and available times for meditation sesssions and contact the services providers directly through the platform."
   },
   {
     githublink: "https://github.com/hansanakavinda/IntelligentItineraryPlanner",
@@ -173,27 +193,7 @@ const projects = [
     video: null,
     problem: "Patients struggle to manage medical records and appointments efficiently across different healthcare providers.",
     solution: "Built a comprehensive patient management system using Next.js and Supabase. Features include appointment scheduling, secure record storage, and a user-friendly dashboard for patients and doctors."
-  },
-  {
-    githublink: "https://github.com/hansanakavinda/Photography_website",
-    demolink: null,
-    image: "/projects/Malcolm.png",
-    projectName: "Photography Website",
-    tags: ["HTML", "CSS", "JavaScript"],
-    video: null,
-    problem: "A photographer needed a visually stunning portfolio to showcase high-resolution images without slow load times.",
-    solution: "Created a responsive, performance-optimized gallery website using vanilla JS and CSS Grid. Implemented lazy loading for images to ensure fast initial page loads."
-  },
-  {
-    githublink: "https://github.com/hansanakavinda/Data_analysis_system",
-    demolink: null,
-    image: "/projects/BurgerHouse.png",
-    projectName: "Data analysis System",
-    tags: ["Python", "Pandas", "Matplotlib"],
-    video: null,
-    problem: "Small businesses lack affordable tools to analyze sales data and generate actionable insights.",
-    solution: "Developed a Python-based data analysis tool using Pandas and Matplotlib. It ingests CSV data and automatically generates visual reports on sales trends, inventory levels, and customer demographics."
-  },
+  }
 ];
 
 export default function Projects() {

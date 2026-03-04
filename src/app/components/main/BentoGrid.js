@@ -39,7 +39,7 @@ export default function BentoGrid() {
                 {/* 2. Profile Image & Status (Span 1 col) */}
                 <BentoCard className="md:col-span-1 row-span-2 relative overflow-hidden group p-0">
                     <Image
-                        src="/pf.png"
+                        src="/pf2.png"
                         alt="Profile"
                         width={400}
                         height={400}

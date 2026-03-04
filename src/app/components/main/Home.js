@@ -1,6 +1,5 @@
 "use client";
 
-
 import { Typewriter } from "react-simple-typewriter";
 import Image from "next/image";
 import { motion } from "framer-motion";
@@ -16,18 +15,6 @@ export default function Home({ scrollToChatBot }) {
       id="home"
       className="h-screen flex flex-col md:flex-row items-center justify-center bg-white/0 leading-relaxed relative px-8 text-center md:text-left gap-4 overflow-hidden"
     >
-      {/* Floating Orbs */}
-      <motion.div
-        className="absolute top-1/4 left-1/4 w-32 h-32 bg-purple-500/20 rounded-full blur-3xl"
-        animate={{ x: [0, 50, 0], y: [0, -50, 0] }}
-        transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
-      />
-      <motion.div
-        className="absolute bottom-1/4 right-1/4 w-40 h-40 bg-blue-500/20 rounded-full blur-3xl"
-        animate={{ x: [0, -30, 0], y: [0, 40, 0] }}
-        transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
-      />
-
       <div className="flex flex-col items-center md:items-start z-10">
         <p className="text-3xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-purple-500 to-blue-500 bg-clip-text text-transparent">
           Hi, I'm
@@ -66,19 +53,14 @@ export default function Home({ scrollToChatBot }) {
 
       <div className="flex flex-col items-center justify-center md:mt-0 z-10">
         {/* Profile Image with Glow */}
-        <div className="relative w-40 h-40 md:w-60 md:h-60 lg:w-[350px] lg:h-[350px] rounded-full bg-radial">
-          <motion.div
-            className="absolute inset-0 rounded-full bg-gradient-to-r from-purple-500 to-blue-500 opacity-50 blur-xl"
-            animate={{ scale: [1, 1.1, 1], opacity: [0.5, 0.8, 0.5] }}
-            transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-          />
-          <div className="relative w-full h-full bg-black/20 rounded-full flex items-center justify-center overflow-hidden border-4 border-white/10">
+        <div className="relative w-40 h-40 md:w-60 md:h-60 lg:w-[350px] lg:h-[450px]">
+          <div className="relative w-full h-full flex items-center justify-center overflow-hidden">
             <Image
               src="/pf.png"
               alt="Profile Picture"
               width={350}
               height={350}
-              className="object-cover w-full h-full"
+              className="object-contain w-full h-full"
             />
           </div>
         </div>
