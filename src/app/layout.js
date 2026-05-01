@@ -1,6 +1,7 @@
 import { Geist, Geist_Mono, Press_Start_2P, Orbitron, Rajdhani } from "next/font/google";
 import "../globals.css";
 import { GoogleAnalytics } from '@next/third-parties/google';
+import { Analytics } from '@vercel/analytics/next';
 
 import Navbar from "./components/navbar";
 import ParticlesBackground from "./components/ParticlesBackground";
@@ -53,6 +54,7 @@ export default function RootLayout({ children }) {
 
           <main className="relative z-10">{children}</main>
           <GoogleAnalytics gaId="G-RZZCEG62S7" />
+          <Analytics />
         </Providers>
       </body>
     </html>
