@@ -35,7 +35,7 @@ ${JSON.stringify(PERSONA_DATA, null, 2)}
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          model: "arcee-ai/trinity-mini:free",
+          model: "openrouter/free",
           messages: [
             { role: "system", content: systemPrompt },
             { role: "user", content: prompt },
